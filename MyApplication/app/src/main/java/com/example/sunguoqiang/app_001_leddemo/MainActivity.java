@@ -1,15 +1,15 @@
 package com.example.sunguoqiang.app_001_leddemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.ContextMenu;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.R.style;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
+
+import com.example.sunguoqiang.hardlibrary.HardControl;
 
 public class MainActivity extends AppCompatActivity {
     private Button button = null;
@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     class MyButtonLister implements View.OnClickListener{
         @Override
         public void onClick(View v) {
+            HardControl hardcontrol=new HardControl();
+
+
             ledon = !ledon;
             if(ledon) {
                 button.setText("ALL OFF");
